@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Dashboard from './pages/Dashboard'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Dashboard />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="*" element={<p style={{ padding: "2rem" }}>404 - Page Not Found</p>} />
+      </Routes>
     </>
   )
 }
