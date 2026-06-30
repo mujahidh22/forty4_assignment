@@ -26,6 +26,7 @@ export default function CreateUserForm() {
     addUser(data);
     reset();
     setSubmitted(true);
+    setOpen(false);
     setTimeout(() => setSubmitted(false), 2500);
   };
 
@@ -89,9 +90,9 @@ export default function CreateUserForm() {
           <button type="submit" className="bg-indigo-600 text-white px-4 py-2 rounded-lg mt-3 hover:bg-indigo-700">
             Add User
           </button>
-          {submitted && <p className="text-green-600 font-semibold mt-2">User added successfully!</p>}
         </form>
       )}
+      {submitted && <p className="text-green-600 font-semibold mt-2">User added successfully!</p>}
     </div>
   );
 }
