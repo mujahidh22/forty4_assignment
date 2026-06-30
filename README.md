@@ -1,16 +1,56 @@
-# React + Vite
+# UserHub - React User Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive user management dashboard built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **User Dashboard:** View all users in a clean, responsive grid layout.
+- **Search & Filter:** Debounced search functionality to instantly filter users by name.
+- **User Details:** Dedicated profile page for each user with contact info, company details, and an embedded geo-location map link.
+- **Add New Users:** A sleek modal form to easily add new users to the system.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
 
-## Expanding the ESLint configuration
+### Main Dashboard
+![Dashboard View](image.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### User Details Page
+![User Details View](image-1.png)
+
+---
+
+## Getting Started
+
+Follow these steps to set up the project locally:
+
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed (version 18+ recommended).
+
+### 2. Installation
+Clone the repository and install the dependencies:
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+Start the Vite development server:
+```bash
+npm run dev
+```
+
+### 4. Open in Browser
+Open your browser and navigate to:
+```
+http://localhost:5173
+```
+
+---
+
+## Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Form Handling:** react-hook-form
+- **Routing:** react-router-dom
+- **Data Fetching:** axios

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://jsonplaceholder.typicode.com";
+const BASE_URL = "https://jsonplaceholder.typicode.com"; //ideally it should be present in .env file.
 
 export const fetchUsers = async () => {
     try {

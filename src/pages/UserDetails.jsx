@@ -5,7 +5,6 @@ export default function UserDetails() {
   const { id } = useParams();
   const { getUserById, loading } = useUsers();
   const user = getUserById(id);
-  console.log('user:',user)
 
   if (loading) return <p className="text-center py-12 text-slate-500 font-medium">Loading...</p>;
 
