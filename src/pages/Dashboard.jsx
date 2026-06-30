@@ -1,3 +1,5 @@
+import CreateUserForm from "../components/CreateUserForm";
+import Loader from "../components/Loader";
 import SearchBar from "../components/SearchBar";
 import UserCard from "../components/UserCard";
 import { useUsers } from "../hooks/useUsers";
@@ -13,14 +15,20 @@ export default function Dashboard() {
             </header>
 
             <SearchBar />
+            <CreateUserForm />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-                {filteredUsers.length === 0 ? (
-                    <p className="col-span-full text-center text-gray-500">No users match your search.</p>
-                ) : (
-                    filteredUsers.map((user) => <UserCard key={user.id} user={user} />)
-                )}
-            </div>
+            {loading && <Loader />}
+            {error && <p className="text-red-600 font-medium">{error}</p>}
+
+            {!loading && !error && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                    {filteredUsers.length === 0 ? (
+                        <p className="col-span-full text-center text-gray-500">No users match your search.</p>
+                    ) : (
+                        filteredUsers.map((user) => <UserCard key={user.id} user={user} />)
+                    )}
+                </div>
+            )}
         </div>
     );
 }
